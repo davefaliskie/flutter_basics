@@ -42,9 +42,15 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: const [
-                    Text("Welcome"),
-                    Text("This is some subtext"),
+                  children: [
+                    Text(
+                      "Welcome",
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    Text(
+                      "This is some subtext",
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
                   ],
                 ),
               ),
