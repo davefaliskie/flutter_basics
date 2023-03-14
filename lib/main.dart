@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: '1ManStartup',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: primary,
       ),
       home: const HomeScreen(),
     );
