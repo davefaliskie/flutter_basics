@@ -39,6 +39,7 @@ class HomeScreen extends StatelessWidget {
                 // debugPrint("The box was clicked");
                 showDialog(
                   context: context,
+                  barrierDismissible: false,
                   builder: (context) {
                     return AlertDialog(
                       title: const Text("The box was clicked"),
