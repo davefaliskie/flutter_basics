@@ -30,8 +30,13 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("1ManStartup"),
       ),
-      body: const Center(
-        child: Text("Subscribe!"),
+      body: Center(
+        child: Container(
+          height: 100,
+          width: 100,
+          color: Colors.amber,
+          child: const Center(child: Text("Hello")),
+        ),
       ),
     );
   }
