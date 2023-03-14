@@ -34,11 +34,22 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.amber,
-              child: const Center(child: Text("Hello")),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.amber,
+                  child: const Center(child: Text("Hello")),
+                ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.green,
+                  child: const Center(child: Text("Hello")),
+                ),
+              ],
             ),
             Container(
               height: 100,
