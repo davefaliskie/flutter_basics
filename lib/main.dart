@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 
@@ -41,11 +42,16 @@ class HomeScreen extends StatelessWidget {
                   context: context,
                   barrierDismissible: false,
                   builder: (context) {
-                    return AlertDialog(
+                    return CupertinoAlertDialog(
                       title: const Text("The box was clicked"),
+                      content: const Text("More context about the action"),
                       actions: [
-                        TextButton(
+                        CupertinoDialogAction(
                           child: const Text("Okay"),
+                          onPressed: () => Navigator.of(context).pop(false),
+                        ),
+                        CupertinoDialogAction(
+                          child: const Text("Done"),
                           onPressed: () => Navigator.of(context).pop(false),
                         ),
                       ],
