@@ -34,28 +34,19 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.amber,
-                  child: const Center(child: Text("Hello")),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
-                  child: const Center(child: Text("Hello")),
-                ),
-              ],
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.blue,
-              child: const Center(child: Text("Hello")),
+            InkWell(
+              onTap: () {
+                debugPrint("The box was clicked");
+              },
+              onDoubleTap: () {
+                debugPrint("The box was clicked 2x");
+              },
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.blue,
+                child: const Center(child: Text("Hello")),
+              ),
             ),
           ],
         ),
