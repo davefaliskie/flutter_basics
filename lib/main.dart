@@ -36,10 +36,21 @@ class HomeScreen extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                debugPrint("The box was clicked");
-              },
-              onDoubleTap: () {
-                debugPrint("The box was clicked 2x");
+                // debugPrint("The box was clicked");
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: const Text("The box was clicked"),
+                      actions: [
+                        TextButton(
+                          child: const Text("Okay"),
+                          onPressed: () => Navigator.of(context).pop(false),
+                        ),
+                      ],
+                    );
+                  },
+                );
               },
               child: Container(
                 height: 100,
