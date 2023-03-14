@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 
@@ -33,39 +32,23 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            InkWell(
-              onTap: () {
-                // debugPrint("The box was clicked");
-                showDialog(
-                  context: context,
-                  barrierDismissible: false,
-                  builder: (context) {
-                    return CupertinoAlertDialog(
-                      title: const Text("The box was clicked"),
-                      content: const Text("More context about the action"),
-                      actions: [
-                        CupertinoDialogAction(
-                          child: const Text("Okay"),
-                          onPressed: () => Navigator.of(context).pop(false),
-                        ),
-                        CupertinoDialogAction(
-                          child: const Text("Done"),
-                          onPressed: () => Navigator.of(context).pop(false),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-              child: Container(
-                height: 100,
-                width: 100,
-                color: Colors.blue,
-                child: const Center(child: Text("Hello")),
+            const Text("Flutter Card"),
+            Card(
+              color: Colors.amber,
+              margin: const EdgeInsets.all(10.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: const [
+                    Text("Welcome"),
+                    Text("This is some subtext"),
+                  ],
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
