@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
+import 'package:flutter_basics/date_time_format.dart';
 import 'package:flutter_basics/string_extension.dart';
 import 'package:flutter_basics/user.dart';
 
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                   const TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
             ),
             Text(
-              "Logged in at: ${user.login}",
+              "Logged in at: ${user.login.fullDate()}",
               style:
                   const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
             ),
