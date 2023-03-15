@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 import 'package:flutter_basics/date_time_format.dart';
+import 'package:flutter_basics/duration_format.dart';
 import 'package:flutter_basics/string_extension.dart';
 import 'package:flutter_basics/user.dart';
 
@@ -28,7 +29,7 @@ class HomeScreen extends StatelessWidget {
   final user = User(
     "dave",
     DateTime.now(),
-    const Duration(seconds: 300),
+    const Duration(seconds: 4283),
   );
 
   @override
@@ -52,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                   const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
             ),
             Text(
-              "For ${user.duration.inSeconds} seconds",
+              "For ${user.duration.secToTime()} time",
               style:
                   const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
             ),
