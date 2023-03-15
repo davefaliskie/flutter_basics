@@ -31,16 +31,11 @@ class HomeScreen extends StatelessWidget {
         title: const Text("1ManStartup"),
       ),
       body: Center(
-        child: Text(
-          "Subscribe!",
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => debugPrint("Action Pressed"),
-        child: const Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          child: Image.asset(
+        "assets/images/rocket.png",
+        height: 100,
+        width: 100,
+      )),
     );
   }
 }
