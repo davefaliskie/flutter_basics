@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
+import 'package:flutter_basics/user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +15,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: '1ManStartup',
       theme: ThemeData(primarySwatch: primary, fontFamily: "Montserrat"),
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final user = User(
+    "Dave",
+    DateTime.now(),
+    const Duration(seconds: 300),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +38,21 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
-              "Subscribe",
-              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
+              user.name,
+              style:
+                  const TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
             ),
             Text(
-              "To see more flutter videos",
-              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
+              "Logged in at: ${user.login}",
+              style:
+                  const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
+            ),
+            Text(
+              "For ${user.duration.inSeconds} seconds",
+              style:
+                  const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
             ),
           ],
         ),
