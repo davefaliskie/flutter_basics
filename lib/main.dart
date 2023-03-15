@@ -27,9 +27,9 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   final user = User(
-    "dave",
-    DateTime.now(),
-    const Duration(seconds: 4283),
+    name: "dave",
+    login: DateTime.now(),
+    duration: const Duration(seconds: 4283),
   );
 
   @override

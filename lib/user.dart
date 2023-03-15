@@ -3,9 +3,9 @@ class User {
   final DateTime login;
   final Duration duration;
 
-  User(
-    this.name,
-    this.login,
-    this.duration,
-  );
+  User({
+    required this.name,
+    required this.login,
+    required this.duration,
+  });
 }
