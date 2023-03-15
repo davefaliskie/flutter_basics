@@ -1,16 +1,7 @@
 # flutter_basics
 
-A new Flutter project.
+Example code related to simpler flutter topics covered in my YouTube shorts.
 
-## Getting Started
+### 👉 [Watch Videos Here](https://youtube.com/playlist?list=PL_D-RntzgLvbiFHkT06q2SS-t4yrTYqAu)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you're looking for code related to videos uploaded before 2023, [check out this repo](https://github.com/davefaliskie/flutter_shorts)
