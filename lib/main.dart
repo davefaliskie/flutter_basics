@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
+import 'package:flutter_basics/data.dart';
 import 'package:flutter_basics/date_time_format.dart';
 import 'package:flutter_basics/duration_format.dart';
 import 'package:flutter_basics/string_extension.dart';
@@ -26,11 +27,7 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final user = User(
-    name: "dave",
-    login: DateTime.now(),
-    duration: const Duration(seconds: 4283),
-  );
+  final user = User.fromJson(userJson);
 
   @override
   Widget build(BuildContext context) {

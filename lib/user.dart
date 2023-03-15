@@ -8,4 +8,12 @@ class User {
     required this.login,
     required this.duration,
   });
+
+  factory User.fromJson(dynamic jsonData) {
+    return User(
+      name: jsonData?["name"],
+      login: DateTime.parse(jsonData?["login"]),
+      duration: Duration(seconds: jsonData?["durationSec"]),
+    );
+  }
 }
