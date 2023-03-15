@@ -31,14 +31,25 @@ class HomeScreen extends StatelessWidget {
         title: const Text("1ManStartup"),
       ),
       body: Center(
-        child: Image.network(
-          "https://1manstartup.s3.amazonaws.com/1manstartup.png",
-          loadingBuilder: (context, child, progress) {
-            if (progress == null) return child;
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          },
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              color: Colors.green,
+              height: 200,
+              width: 200,
+            ),
+            Container(
+              color: primary,
+              height: 125,
+              width: 125,
+            ),
+            Image.asset(
+              "assets/images/rocket.png",
+              height: 100,
+              width: 100,
+            ),
+          ],
         ),
       ),
     );
