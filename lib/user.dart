@@ -16,4 +16,12 @@ class User {
       duration: Duration(seconds: jsonData?["durationSec"]),
     );
   }
+
+  Map<String, String> toJson() {
+    return {
+      "name": name,
+      "login": login.toString(),
+      "duration": duration.inSeconds.toString(),
+    };
+  }
 }

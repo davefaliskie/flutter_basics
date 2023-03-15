@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
-import 'package:flutter_basics/data.dart';
 import 'package:flutter_basics/date_time_format.dart';
 import 'package:flutter_basics/duration_format.dart';
 import 'package:flutter_basics/string_extension.dart';
@@ -27,7 +26,11 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final user = User.fromJson(userJson);
+  final user = User(
+    name: "1ManStartup",
+    login: DateTime.now(),
+    duration: const Duration(seconds: 483),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +56,12 @@ class HomeScreen extends StatelessWidget {
               "For ${user.duration.secToTime()} time",
               style:
                   const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                debugPrint("Person as Json: ${user.toJson()}");
+              },
+              child: const Text("Convert to Json"),
             ),
           ],
         ),
