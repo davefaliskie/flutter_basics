@@ -31,11 +31,16 @@ class HomeScreen extends StatelessWidget {
         title: const Text("1ManStartup"),
       ),
       body: Center(
-          child: Image.asset(
-        "assets/images/rocket.png",
-        height: 100,
-        width: 100,
-      )),
+        child: Image.network(
+          "https://1manstartup.s3.amazonaws.com/1manstartup.png",
+          loadingBuilder: (context, child, progress) {
+            if (progress == null) return child;
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          },
+        ),
+      ),
     );
   }
 }
