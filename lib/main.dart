@@ -36,22 +36,11 @@ class HomeScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.amber,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              onPressed: () => debugPrint("Go Home"),
-              icon: const Icon(Icons.home),
-            ),
-            IconButton(
-              onPressed: () => debugPrint("Go to Settings"),
-              icon: const Icon(Icons.settings),
-            ),
-          ],
-        ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => debugPrint("Action Pressed"),
+        child: const Icon(Icons.add),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
