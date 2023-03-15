@@ -31,30 +31,24 @@ class HomeScreen extends StatelessWidget {
         title: const Text("1ManStartup"),
       ),
       body: Center(
-        child: Column(
+        child: Text(
+          "Subscribe!",
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.amber,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text("Flutter Card"),
-            Card(
-              color: Colors.amber,
-              margin: const EdgeInsets.all(10.0),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      "Welcome",
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    Text(
-                      "This is some subtext",
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                  ],
-                ),
-              ),
-            )
+            IconButton(
+              onPressed: () => debugPrint("Go Home"),
+              icon: const Icon(Icons.home),
+            ),
+            IconButton(
+              onPressed: () => debugPrint("Go to Settings"),
+              icon: const Icon(Icons.settings),
+            ),
           ],
         ),
       ),
