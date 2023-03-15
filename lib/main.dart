@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '1ManStartup',
-      theme: ThemeData(
-        primarySwatch: primary,
-      ),
+      theme: ThemeData(primarySwatch: primary, fontFamily: "Montserrat"),
       home: const HomeScreen(),
     );
   }
@@ -31,23 +29,16 @@ class HomeScreen extends StatelessWidget {
         title: const Text("1ManStartup"),
       ),
       body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              color: Colors.green,
-              height: 200,
-              width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text(
+              "Subscribe",
+              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
             ),
-            Container(
-              color: primary,
-              height: 125,
-              width: 125,
-            ),
-            Image.asset(
-              "assets/images/rocket.png",
-              height: 100,
-              width: 100,
+            Text(
+              "To see more flutter videos",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
             ),
           ],
         ),
