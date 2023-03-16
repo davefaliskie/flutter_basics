@@ -35,10 +35,21 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("1ManStartup"),
       ),
-      body: Container(
-        color: Colors.amber,
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width * 0.5,
+      body: Column(
+        children: [
+          Container(
+            height: 150,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.purple,
+          ),
+          const Spacer(flex: 3),
+          Container(
+            height: 150,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.orange,
+          ),
+          const Spacer(),
+        ],
       ),
     );
   }
