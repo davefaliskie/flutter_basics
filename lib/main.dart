@@ -35,14 +35,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("1ManStartup"),
       ),
-      body: SafeArea(
-        child: Align(
-          alignment: Alignment.topCenter,
-          child: ElevatedButton(
-            onPressed: () {},
-            child: const Text("Sign In"),
-          ),
-        ),
+      body: Container(
+        color: Colors.amber,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width * 0.5,
       ),
     );
   }
