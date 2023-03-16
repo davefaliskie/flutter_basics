@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Align(
-          alignment: Alignment.bottomCenter,
+          alignment: Alignment.topCenter,
           child: ElevatedButton(
             onPressed: () {},
             child: const Text("Sign In"),
