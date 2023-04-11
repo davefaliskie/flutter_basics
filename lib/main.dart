@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
+import 'package:flutter_basics/data.dart';
 import 'package:flutter_basics/user.dart';
 
 void main() {
@@ -35,21 +36,21 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("1ManStartup"),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 150,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.purple,
-          ),
-          const Spacer(flex: 3),
-          Container(
-            height: 150,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.orange,
-          ),
-          const Spacer(),
-        ],
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.amber,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Users",
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            Text("${usersList.map((user) => user.name)}"),
+          ],
+        ),
       ),
     );
   }
