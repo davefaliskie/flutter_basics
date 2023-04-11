@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 import 'package:flutter_basics/data.dart';
+import 'package:flutter_basics/duration_format.dart';
 import 'package:flutter_basics/user.dart';
 
 void main() {
@@ -44,9 +45,20 @@ class HomeScreen extends StatelessWidget {
           itemCount: usersList.length,
           itemBuilder: (context, index) {
             return Card(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(usersList[index].name),
+              child: ListTile(
+                title: Text(usersList[index].name),
+                subtitle: Text(
+                  "Logged in for ${usersList[index].duration.secToTime()}",
+                ),
+                leading: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.person, size: 30),
+                  ],
+                ),
+                trailing: const Icon(
+                  Icons.star,
+                ),
               ),
             );
           },
