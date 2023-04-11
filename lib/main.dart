@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 import 'package:flutter_basics/data.dart';
 import 'package:flutter_basics/duration_format.dart';
+import 'package:flutter_basics/profile_screen.dart';
 import 'package:flutter_basics/user.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
@@ -49,6 +50,18 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("1ManStartup"),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ProfileScreen(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Container(
         width: double.infinity,
