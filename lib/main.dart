@@ -40,16 +40,16 @@ class HomeScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         color: Colors.amber,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "Users",
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            Text("${usersList.map((user) => user.name)}"),
-          ],
+        child: ListView.builder(
+          itemCount: usersList.length,
+          itemBuilder: (context, index) {
+            return Card(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(usersList[index].name),
+              ),
+            );
+          },
         ),
       ),
     );
