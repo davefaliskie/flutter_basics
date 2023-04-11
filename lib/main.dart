@@ -31,7 +31,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: '1ManStartup',
       theme: ThemeData(primarySwatch: primary, fontFamily: "Montserrat"),
-      home: HomeScreen(),
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/profile': (context) => const ProfileScreen(),
+      },
     );
   }
 }
@@ -54,12 +57,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.person),
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const ProfileScreen(),
-                  fullscreenDialog: true,
-                ),
-              );
+              Navigator.of(context).pushNamed('/profile');
             },
           ),
         ],
