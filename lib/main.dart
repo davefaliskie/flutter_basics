@@ -57,6 +57,7 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const ProfileScreen(),
+                  fullscreenDialog: true,
                 ),
               );
             },
