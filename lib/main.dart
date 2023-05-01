@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    testList();
     return Scaffold(
       appBar: AppBar(
         title: const Text("1ManStartup"),
@@ -66,10 +67,16 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-void logEvent() {
-  debugPrint("Event Logged");
-}
+final languages = [
+  "English",
+  "Spanish",
+  "French",
+  "Italian",
+  "Chinese",
+];
 
-String add(int num1, int num2) {
-  return "Total: ${num1 + num2}";
+void testList() {
+  for (var language in languages) {
+    debugPrint(language);
+  }
 }
