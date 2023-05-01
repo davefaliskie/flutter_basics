@@ -65,3 +65,11 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+void logEvent() {
+  debugPrint("Event Logged");
+}
+
+String add(int num1, int num2) {
+  return "Total: ${num1 + num2}";
+}
