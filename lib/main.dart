@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 import 'package:flutter_basics/profile_screen.dart';
 import 'package:flutter_basics/user.dart';
+import 'package:lottie/lottie.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -52,9 +53,8 @@ class HomeScreen extends StatelessWidget {
         height: double.infinity,
         color: Colors.amber,
         child: Center(
-          child: Text(
-            "Subscribe",
-            style: Theme.of(context).textTheme.bodyLarge,
+          child: Lottie.network(
+            "https://assets5.lottiefiles.com/packages/lf20_zp3rcqsg.json",
           ),
         ),
       ),
