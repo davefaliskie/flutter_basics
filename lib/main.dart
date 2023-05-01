@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  final subscribed = false;
+  final bool subscribed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +50,15 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.network(
-              "https://assets5.lottiefiles.com/packages/lf20_zp3rcqsg.json",
-            ),
+            if (subscribed == false) ...[
+              Lottie.network(
+                "https://assets5.lottiefiles.com/packages/lf20_zp3rcqsg.json",
+              ),
+            ] else ...[
+              Lottie.network(
+                "https://assets4.lottiefiles.com/packages/lf20_5s1rumi5.json",
+              ),
+            ]
           ],
         ),
       ),
