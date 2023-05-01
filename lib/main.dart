@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/colors.dart';
 import 'package:flutter_basics/profile_screen.dart';
-import 'package:flutter_basics/user.dart';
 import 'package:lottie/lottie.dart';
 
 void main() async {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: '1ManStartup',
       theme: ThemeData(primarySwatch: primary, fontFamily: "Montserrat"),
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => const HomeScreen(),
         '/profile': (context) => const ProfileScreen(),
       },
     );
@@ -26,13 +25,9 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
-  final user = User(
-    name: "1ManStartup",
-    login: DateTime.now(),
-    duration: const Duration(seconds: 483),
-  );
+  final subscribed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -52,10 +47,13 @@ class HomeScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         color: Colors.amber,
-        child: Center(
-          child: Lottie.network(
-            "https://assets5.lottiefiles.com/packages/lf20_zp3rcqsg.json",
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Lottie.network(
+              "https://assets5.lottiefiles.com/packages/lf20_zp3rcqsg.json",
+            ),
+          ],
         ),
       ),
     );
