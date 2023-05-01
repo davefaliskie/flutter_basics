@@ -67,16 +67,14 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-final languages = [
-  "English",
-  "Spanish",
-  "French",
-  "Italian",
-  "Chinese",
-];
+final languages = {
+  "english": 1678,
+  "spanish": 890,
+  "french": 213,
+  "italian": 87,
+  "chinese": 230,
+};
 
 void testList() {
-  for (var language in languages) {
-    debugPrint(language);
-  }
+  debugPrint(languages["english"].toString());
 }
